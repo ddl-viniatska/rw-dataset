@@ -1,9 +1,8 @@
 library(tidyverse)
 
-dir_write_dataset = '/mnt/data/GB-RW'
-dir_read_dataset = '/mnt/data/snapshots/GB-RW/diabetes'
+dir_write_dataset = 
+dir_read_dataset = 
 dir_fullpath_file = file.path(dir_read_dataset, "diabetes.csv")
-
 
 df_diabetes = read.csv(dir_fullpath_file)
 
