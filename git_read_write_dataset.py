@@ -18,8 +18,9 @@ print(sum)
 input_file.close()
 
 os.chdir(read_write_path)
-print(os.listdir(read_write_path))
 
 output_file = open('output.txt', 'w')
 output_file.write(str(sum))
 output_file.close()
+
+print(os.listdir(read_write_path))
