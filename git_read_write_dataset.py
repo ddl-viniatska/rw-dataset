@@ -1,26 +1,13 @@
 import os
-read_write_path =
-read_path =
-input_file = 'input.txt'
 
-os.chdir(read_path)
-input_file = open(input_file, 'r')
+read_write_path = 
+read_path = 
 
-lines = input_file.readlines()
-sum = 0
+with open(read_path, "r") as f:
+    print(f.read())
 
-for line in lines:
-    for c in line:
-        if c.isdigit() == True:
-            sum += int(c)
-
-print(sum)
-input_file.close()
-
-os.chdir(read_write_path)
-
-output_file = open('output.txt', 'w')
-output_file.write(str(sum))
-output_file.close()
+with open(f"{read_write_path}/data.txt", "w") as f:
+    data = "some data to be written to the file"
+    f.write(data)
 
 print(os.listdir(read_write_path))
