@@ -1,0 +1,20 @@
+project: domino_feast
+registry: data/registry.db
+provider: local
+offline_store:
+    type: snowflake.offline
+    user: ${FEAST_SNOWFLAKE_USER}
+    database: DIABETES
+    account: kma55258
+    password: ${FEAST_SNOWFLAKE_PASSWORD}
+    role: public
+    warehouse: DOMINODATALB
+online_store:
+    type: snowflake.online
+    account: kma55258
+    role: public
+    warehouse: DOMINODATALAB
+    database: DIABETES
+    user: ${FEAST_SNOWFLAKE_ONLINE_USER}
+    password: ${FEAST_SNOWFLAKE_ONLINE_PASSWORD}
+entity_key_serialization_version: 2
